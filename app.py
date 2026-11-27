@@ -21,7 +21,7 @@ with open("passages.json", "r") as f:
 
 model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
-texts = [p["text"] for p in passages]
+texts = passages
 embeddings = model.encode(
     texts,
     normalize_embeddings=True
